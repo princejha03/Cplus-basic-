@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int numsub;
+    float marks,per,sum=0;
+    cout << "Enter the number of subject= ";
+    cin >> numsub;
+    for(int i=1;i <= numsub;++i){
+        cout << "entre the marks of subject " << i << ":";
+        cin >> marks; 
+        
+        sum +=marks;
+    }
+    per= ((sum)/(numsub*100)) * 100;
+    cout << "the total marks obtained: " << sum << "\n";
+    cout << "the percentage: " << per;
+    return 0;
+}
