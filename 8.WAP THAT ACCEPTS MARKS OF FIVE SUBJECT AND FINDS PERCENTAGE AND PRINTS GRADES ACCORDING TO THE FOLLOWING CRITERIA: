@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+    int num, i;
+    float totalMarks, per;
+
+    cout << "Enter the number of subjects: ";
+    cin >> num;
+
+    int marks[num];
+
+    for (i = 0; i < num; i++) {
+        cout << "Enter the marks of subject " << i + 1 << ": ";
+        cin >> marks[i];
+    }
+
+    totalMarks = 0;
+
+    for (i = 0; i < num; i++) {
+        totalMarks += marks[i];
+    }
+
+    per = (totalMarks / (num * 100)) * 100;
+
+    cout << "The total marks obtained in " << num << " subjects = " << totalMarks << "\n";
+    cout << "The percentage is = " << per;
+
+    return 0;
+}
