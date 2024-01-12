@@ -1,0 +1,15 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int a,b,c;
+    cout << "enter the first number: ";
+    cin >> a;
+    cout << "enter the second number: ";
+    cin >> b;
+    cout << "before swapping\n" << a << "\n" << b <<"\n";
+    c=a;
+    a=b;
+    b=c;
+    cout << "After swapping\n" << a << "\n" << b;
+    return 0;
+}
