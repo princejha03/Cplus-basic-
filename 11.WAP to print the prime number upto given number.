@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+int isprime(int num){
+    if(num <=1){
+        return 0;
+    }
+    for(int i=2;i <=num/2;i++){
+        if(num%i==0){
+            return 0;
+        }
+    }
+    return 1;
+}
+int main(){
+    int num;
+    std::cout << "Enter the number= ";
+    std::cin >> num;
+    std::cout << "The prime numbers from 1 to " << num << " are:\n";
+    for (int i = 2; i <= num; i++) {
+        if (isprime(i)) {
+            std::cout << i << " ";
+        }
+    }
+    std::cout << "\n";
+    return 0;
+}
