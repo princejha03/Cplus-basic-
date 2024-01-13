@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+
+void table(int num, int range) {
+    int mul;
+    for (int i = 1; i <= range; i++) {
+        mul = num * i;
+        cout << num << " * " << i << " = " << mul << "\n";
+    }
+}
+
+int main() {
+    int num, range;
+    
+    cout << "Enter the number: ";
+    cin >> num;
+    
+    cout << "Enter the range: ";
+    cin >> range;
+
+    cout << "The table " << num << " with range " << range << " is:\n";
+    table(num, range);
+
+    return 0;
+}
