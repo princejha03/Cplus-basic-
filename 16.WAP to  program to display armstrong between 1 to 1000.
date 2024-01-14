@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+int isarmstrong(int num){
+    int sum=0;
+    int temp = num;
+    while(num > 0){
+        int rem = num%10;
+        sum = sum + (rem*rem*rem);
+        num = num/10;
+    }
+    return temp == sum;
+}
+int main(){
+    int start,end,c;
+    cout <<"Enter the starting number: ";
+    cin >> start;
+    cout <<"Enter the ending number: ";
+    cin >> end;
+    for(int i=start;i<=end;i++){
+        if(isarmstrong(i)){
+            cout << " " <<i;
+        }
+    }
+    return 0;
+}
