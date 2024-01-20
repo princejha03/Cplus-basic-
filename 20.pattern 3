@@ -29,3 +29,114 @@ int main() {
     nBinaryTriangle(n);
     return 0;
 }
+
+1    1
+12  21
+123321
+
+#include<iostream>
+using namespace std;
+int patt(int n){
+    int i,j;
+    int space =2*(n-1);
+    for(i=1;i<=n;i++){
+        for(j=1;j<=i;j++){
+            cout << j ;
+        }
+        for(j=1;j<=space;j++){
+            cout <<" ";
+        }
+        for(j=i;j>=1;j--){
+            cout << j;
+        }
+        cout << endl;
+        space -=2;
+    }
+    return 0;
+}
+int main(){
+    int n=3;
+    patt(n);
+    return 0;
+}
+
+A 
+A B 
+A B C 
+A B C D 
+A B C D E 
+
+#include<iostream>
+using namespace std;
+int patt(int n){
+    int i,j;
+        for(i=0;i<n;i++){
+        for(char ch='A';ch<='A'+i;ch++){
+            cout << ch << " " ;
+        }
+        cout << endl;
+    }
+    return 0;
+}
+int main(){
+    int n=5;
+    patt(n);
+    return 0;
+}
+
+************
+*****  *****
+****    ****
+***      ***
+**        **
+*          *
+*          *
+**        **
+***      ***
+****    ****
+*****  *****
+************
+
+#include<iostream>
+using namespace std;
+
+int main() {
+    int i, j;
+    int n = 5;
+    int insp = 0;
+
+    // Upward pyramid
+    for (i = 0; i <= n; i++) {
+        for (j = 0; j <= n - i; j++) {
+            cout << "*";
+        }
+        for (j = 0; j < insp; j++) {
+            cout << " ";
+        }
+        for (j = 0; j <= n - i; j++) {
+            cout << "*";
+        }
+        insp += 2;
+        cout << endl;
+    }
+
+    int inspp = 2 * (n - 1);
+
+    // Downward pyramid
+    for (i = 1; i <= n; i++) {
+        for (j = 1; j <= i; j++) {
+            cout << "*";
+        }
+        for (j = 1; j <= inspp; j++) {
+            cout << " ";
+        }
+        for (j = i; j >= 1; j--) {
+            cout << "*";
+        }
+        inspp -= 2;
+        cout << endl;
+    }
+
+    return 0;
+}
+
