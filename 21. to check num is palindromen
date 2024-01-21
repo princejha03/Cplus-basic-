@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+int palindrome(int n){
+    int orgnum = n;
+    int revnum = 0;
+    while(n>0){
+        int digit = n%10;
+        revnum = revnum *10 +digit;
+        n= n/10;
+    }
+    return orgnum == revnum;
+}
+int main(){
+    int num;
+    cout << "enter the number: ";
+    cin >> num;
+    if(palindrome(num)){
+        cout << "The number is palindrome.";
+    }
+    else {
+        cout <<  "The number is not palindrome.";
+    }
+    return 0;
+}
