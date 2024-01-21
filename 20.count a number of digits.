@@ -1,0 +1,13 @@
+int countDigits(int n){
+		int rem;
+		int copy=n;
+		int count =0;
+		while(n!=0){
+			rem=n%10;
+			if(rem!=0 && copy%rem==0){
+				count ++;
+			}
+			n=n/10;
+		}
+		return count;
+}
